@@ -1,0 +1,158 @@
+import numpy as np
+# Task no 1
+def function1():
+    # create 2d array from 1,12 range 
+    # dimension should be 6row 2 columns  
+    # and assign this array values in x values in x variable
+    # Hint: you can use arange and reshape numpy methods  
+    x =  np.arange(1,13).reshape((6,2)) 
+
+    return x
+function1()
+    """
+    expected output:
+    [[ 1  2]
+    [ 3  4]
+    [ 5  6]
+    [ 7  8]
+    [ 9 10]
+    [11 12]]
+    """
+
+import numpy as np
+#task4
+def function4():
+    #Swap columns 1 and 2 in the array arr.
+    arr = np.arange(9).reshape(3,3)
+    print(arr) #wrtie your code here
+    print("After swapping arrays the 2nd column and first column:") 
+    arr[:, [0, 1]] = arr[:, [1, 0]] 
+    return arr
+function4()
+    """
+    Expected Output:
+          array([[1, 0, 2],
+                [4, 3, 5],
+                [7, 6, 8]])
+    """ 
+
+import numpy as np
+#task5
+def function5():
+    #Create a null vector of size 20 with 4 rows and 5 columns with numpy function
+    z = np.zeros([4,5],dtype=int) #wrtie your code here
+    return z
+function5()
+    """
+    Expected Output:
+          array([[0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0]])
+    """ 
+
+import numpy as np
+#task6
+def function6():
+    # Create a null vector of size 10 but the fifth and eighth value which is 10,20 respectively
+   
+    arr = np.zeros(10)#wrtie your code here 
+    print(arr)
+    print("Update 5th & 8th value to 10 and 20")
+    arr[5] = 10;  arr[8]=20;
+    return arr
+function6()   
+"""
+    Expected Output:
+          [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+Update 5th & 8th value to 10 and 20
+array([ 0.,  0.,  0.,  0.,  0., 10.,  0.,  0., 20.,  0.])
+    """ 
+
+import numpy as np
+#task7
+import numpy as geek
+def function7():
+    #  Create an array of zeros with the same shape and type as X. Dont use reshape method
+    x = np.arange(4, dtype=np.int64) 
+    x = geek.zeros(4,dtype=np.int64) 
+    return(x ,'dtype=int64')  #write your code here
+function7()
+ """
+    Expected Output:
+          array([0, 0, 0, 0], dtype=int64)
+    """ 
+
+import numpy as np
+#task8
+def function8():
+    # Create a new array of 2x5 uints, filled with 6.
+    x = np.full((2, 5), 6, dtype=np.uint32) #write your code here
+    return x
+function8()
+
+     """
+     Expected Output:
+              array([[6, 6, 6, 6, 6],
+                     [6, 6, 6, 6, 6]], dtype=uint32)
+     """ 
+
+import numpy as np
+#task13
+def function13():
+    # Set a condition which gets all items between 5 and 10 from arr.
+    arr = np.array([2, 6, 1, 9, 10, 3, 27])
+    ans = [False, True, False, True, False,False,False] #write your code here 
+    newarr = arr[ans]
+    return newarr
+function13()
+
+     """
+     Expected Output:
+              array([6, 9])
+     """     
+
+
+import numpy as np
+#task16
+def function16():
+    #Write a NumPy program to join a sequence of arrays along depth.
+    x = np.array([[1], [2], [3]])
+    y = np.array([[2], [3], [4]])
+    ans = np.dstack((x, y))
+    return ans
+function16()
+
+     """
+     Expected Output:
+                [[[1 2]]
+                 [[2 3]]
+                 [[3 4]]]
+     """     
+
+import numpy as np
+#Task20
+def function20():
+    #apply fuction "abc" on each value of Array "X"
+    x = np.arange(1,11)
+    def abc(x):
+        return x*2+3-2
+    return x*2+3-2 #Write your Code here
+function20()
+#Expected Output: array([ 3,  5,  7,  9, 11, 13, 15, 17, 19, 21])
+
+import numpy as np
+#task15
+def function15():
+    #Sort following NumPy array by the second column
+    arr = np.array([[ 8,  2, -2],[-4,  1,  7],[ 6,  3,  9]])
+    ans = arr[arr[:,1].argsort()]  #write your code here 
+    return ans
+function15()
+
+     """
+     Expected Output:
+           array([[-4,  1,  7],
+                   [ 8,  2, -2],
+                   [ 6,  3,  9]])
+     """ 
